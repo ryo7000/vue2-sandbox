@@ -25,7 +25,7 @@ export default Vue.extend({
     };
   },
   computed: {
-    buttonLabel: function () {
+    buttonLabel: function (): string {
       return `${this.label}-${this.count}`;
     },
   },
