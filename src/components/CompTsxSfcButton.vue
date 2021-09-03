@@ -3,7 +3,7 @@ import { defineComponent, ref, computed } from "@vue/composition-api";
 import { VRow, VBtn } from "vuetify/lib";
 
 export default defineComponent({
-  name: "Buttons",
+  name: "CompTsxSfcButton",
   props: {
     label: String,
   },
@@ -16,31 +16,18 @@ export default defineComponent({
 
     return () => (
       <div>
-        <div class="h1 colored">TSX+SFC pattern</div>
+        <VRow
+          align="center"
+          justify="space-around"
+        >
+          <div class="h3 colored">Composition API with TSX+SFC pattern</div>
+        </VRow>
         <VRow
           align="center"
           justify="space-around"
         >
           <VBtn depressed onClick={onClick}>
             { label.value }
-          </VBtn>
-          <VBtn
-            depressed
-            color="primary"
-          >
-            Primary
-          </VBtn>
-          <VBtn
-            depressed
-            color="error"
-          >
-            Error
-          </VBtn>
-          <VBtn
-            depressed
-            disabled
-          >
-            Disabled
           </VBtn>
         </VRow>
       </div>

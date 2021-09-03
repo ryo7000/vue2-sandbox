@@ -2,10 +2,10 @@
 import { defineComponent } from "@vue/composition-api";
 import logo from "./assets/logo.png";
 import { VApp, VMain, VDivider } from "vuetify/lib";
-import HelloWorld from "./components/HelloWorld.vue";
-import Buttons from "./components/Buttons.vue";
-import Buttons2 from "./components/Buttons2";
-import Buttons3 from "./components/Buttons3.vue";
+import CompTsxSfcButton from "./components/CompTsxSfcButton.vue";
+import CompTsxOnlyButton from "./components/CompTsxOnlyButton";
+import CompTemplateButton from "./components/CompTemplateButton.vue";
+import OptionalButton from "./components/OptionalButton.vue";
 
 export default defineComponent({
   name: "App",
@@ -15,13 +15,14 @@ export default defineComponent({
         <VApp>
           <VMain>
             <img alt="Vue logo" src={logo} />
-            <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
             <VDivider class="ma-4" />
-            <Buttons label="Button1" />
+            <CompTsxSfcButton label="Button1" />
             <VDivider class="ma-4" />
-            <Buttons2 label="Button2" />
+            <CompTsxOnlyButton label="Button2" />
             <VDivider class="ma-4" />
-            <Buttons3 label="Button3" />
+            <CompTemplateButton label="Button3" />
+            <VDivider class="ma-4" />
+            <OptionalButton label="Button4" />
           </VMain>
         </VApp>
       </div>

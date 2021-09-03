@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div class="h1 colored">template pattern</div>
+    <v-row
+      align="center"
+      justify="space-around"
+    >
+      <div class="h3 colored">Composition API with template pattern</div>
+    </v-row>
     <v-row
       align="center"
       justify="space-around"
@@ -8,33 +13,15 @@
       <v-btn depressed @click=onClick>
         {{ buttonLabel }}
       </v-btn>
-      <v-btn
-        depressed
-        color="primary"
-      >
-        Primary
-      </v-btn>
-      <v-btn
-        depressed
-        color="error"
-      >
-        Error
-      </v-btn>
-      <v-btn
-        depressed
-        disabled
-      >
-        Disabled
-      </v-btn>
     </v-row>
   </div>
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 import { defineComponent, ref, computed } from "@vue/composition-api";
 
 export default defineComponent({
-  name: "Buttons3",
+  name: "CompTemplateButton",
   props: {
     label: String,
   },
