@@ -16,21 +16,17 @@ export default defineComponent({
     // Can't use local css class like vue scoped css
     return () => (
       <div>
-        <VRow
-          align="center"
-          justify="space-around"
-        >
-          <div class="h3" style="color: red">Composition API with TSX only pattern</div>
+        <VRow align="center" justify="space-around">
+          <div class="h3" style="color: red">
+            Composition API with TSX only pattern
+          </div>
         </VRow>
-        <VRow
-          align="center"
-          justify="space-around"
-        >
+        <VRow align="center" justify="space-around">
           <VBtn depressed onClick={onClick}>
-            { label.value }
+            {label.value}
           </VBtn>
         </VRow>
       </div>
     );
-  }
+  },
 });

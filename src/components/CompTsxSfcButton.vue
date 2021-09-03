@@ -16,28 +16,22 @@ export default defineComponent({
 
     return () => (
       <div>
-        <VRow
-          align="center"
-          justify="space-around"
-        >
+        <VRow align="center" justify="space-around">
           <div class="h3 colored">Composition API with TSX+SFC pattern</div>
         </VRow>
-        <VRow
-          align="center"
-          justify="space-around"
-        >
+        <VRow align="center" justify="space-around">
           <VBtn depressed onClick={onClick}>
-            { label.value }
+            {label.value}
           </VBtn>
         </VRow>
       </div>
     );
-  }
+  },
 });
 </script>
 
 <style scoped>
 .colored {
-  color: red
+  color: red;
 }
 </style>

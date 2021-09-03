@@ -1,16 +1,10 @@
 <template>
   <div>
-    <v-row
-      align="center"
-      justify="space-around"
-    >
+    <v-row align="center" justify="space-around">
       <div class="h3 colored">Optional API</div>
     </v-row>
-    <v-row
-      align="center"
-      justify="space-around"
-    >
-      <v-btn depressed @click=onClick>
+    <v-row align="center" justify="space-around">
+      <v-btn depressed @click="onClick">
         {{ buttonLabel }}
       </v-btn>
     </v-row>
@@ -25,27 +19,26 @@ export default Vue.extend({
   props: {
     label: String,
   },
-  data: function() {
+  data: function () {
     return {
       count: 0,
     };
   },
   computed: {
-    buttonLabel: function() {
+    buttonLabel: function () {
       return `${this.label}-${this.count}`;
     },
   },
   methods: {
-    onClick: function() {
+    onClick: function () {
       this.count++;
     },
-  }
+  },
 });
 </script>
 
 <style scoped>
 .colored {
-  color: red
+  color: red;
 }
 </style>
-
