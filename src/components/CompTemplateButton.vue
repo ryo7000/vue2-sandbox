@@ -8,18 +8,22 @@
         {{ buttonLabel }}
       </v-btn>
       <OptionalEmit @customEvent="onClickEvent" />
+      <OptionalModel v-model="modelCount" />
+      <span>{{ modelCount }}</span>
     </v-row>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "@vue/composition-api";
+import { defineComponent, ref, computed, reactive } from "@vue/composition-api";
 import OptionalEmit from "./OptionalEmit.vue";
+import OptionalModel from "./OptionalModel.vue";
 
 export default defineComponent({
   name: "CompTemplateButton",
   components: {
     OptionalEmit,
+    OptionalModel,
   },
   props: {
     label: String,
@@ -35,11 +39,14 @@ export default defineComponent({
       console.log(value);
     };
 
+    const modelCount = reactive({count: 0});
+
     // Use name like "buttonLabel" because "label" is same as props name.
     return {
       onClick,
       onClickEvent,
       buttonLabel: label,
+      modelCount: modelCount.count,
     };
   },
 });
