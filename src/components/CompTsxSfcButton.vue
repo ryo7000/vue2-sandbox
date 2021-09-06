@@ -1,6 +1,7 @@
 <script lang="tsx">
 import { defineComponent, ref, computed } from "@vue/composition-api";
 import { VRow, VBtn } from "vuetify/lib";
+import OptionalEmit from "./OptionalEmit.vue";
 
 export default defineComponent({
   name: "CompTsxSfcButton",
@@ -23,6 +24,7 @@ export default defineComponent({
           <VBtn depressed onClick={onClick}>
             {label.value}
           </VBtn>
+          <OptionalEmit onCustomEvent={(value: any) => console.log(value)} />
         </VRow>
       </div>
     );
