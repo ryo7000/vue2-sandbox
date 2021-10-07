@@ -57,6 +57,18 @@ export default defineComponent({
             />
           </VCol>
           <VCol>
+            {/*
+              model attribute pattern
+              https://github.com/vuejs/jsx/blob/5368c63ec768c070cfc259a506d9de43cb930bdb/packages/babel-sugar-v-model/test/snapshot.js#L27-L36
+            */}
+            <OptionalModel
+              model={{
+                value: modelCount.count,
+                callback: (value: any) => (modelCount.count = value),
+              }}
+            />
+          </VCol>
+          <VCol>
             <span>{modelCount.count}</span>
           </VCol>
           <VCol>
