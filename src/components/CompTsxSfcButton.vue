@@ -16,7 +16,7 @@ export default defineComponent({
     };
     const label = computed(() => `${props.label}-${count.value}`);
 
-    const modelCount = reactive({count: 0});
+    const modelCount = reactive({ count: 0 });
 
     const flag = ref(false);
 
@@ -29,13 +29,15 @@ export default defineComponent({
           {/*
             Use scopedSlots
           */}
-          <VTooltip bottom scopedSlots={{
-            activator: ({on, attrs}: any) => (
-              <VBtn depressed onClick={onClick} {...{ on }} {...{ attrs }}>
-                {label.value}
-              </VBtn>
-            )
-          }}
+          <VTooltip
+            bottom
+            scopedSlots={{
+              activator: ({ on, attrs }: any) => (
+                <VBtn depressed onClick={onClick} {...{ on }} {...{ attrs }}>
+                  {label.value}
+                </VBtn>
+              ),
+            }}
           >
             <span>Tooltip</span>
           </VTooltip>
@@ -44,12 +46,15 @@ export default defineComponent({
             Can't use v-model with composition-api and jsx/tsx
             https://github.com/vuejs/jsx/issues/169
           */}
-          <OptionalModel value={modelCount.count} onInput={(value: any) => modelCount.count = value} />
+          <OptionalModel
+            value={modelCount.count}
+            onInput={(value: any) => (modelCount.count = value)}
+          />
           <span>{modelCount.count}</span>
           {/*
             Use named slots
           */}
-          <VSwitch value={flag.value} onInput={(v: any) => flag.value = v}>
+          <VSwitch value={flag.value} onInput={(v: any) => (flag.value = v)}>
             <template slot="label">
               <span>GHQ</span>
             </template>
