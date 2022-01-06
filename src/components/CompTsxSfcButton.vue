@@ -3,6 +3,7 @@ import { defineComponent, ref, computed, reactive } from "@vue/composition-api";
 import { VRow, VCol, VBtn, VSwitch, VTooltip } from "vuetify/lib";
 import OptionalEmit from "./OptionalEmit.vue";
 import OptionalModel from "./OptionalModel.vue";
+import CompTsxSfcEmit from "./CompTsxSfcEmit.vue";
 
 export default defineComponent({
   name: "CompTsxSfcButton",
@@ -45,6 +46,9 @@ export default defineComponent({
           </VCol>
           <VCol>
             <OptionalEmit onCustomEvent={(value: any) => console.log(value)} />
+          </VCol>
+          <VCol>
+            <CompTsxSfcEmit onClick={() => console.log("clicked")} />
           </VCol>
           <VCol>
             {/*
