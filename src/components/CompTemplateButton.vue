@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, reactive } from "@vue/composition-api";
+import { defineComponent, ref, computed, reactive } from "vue";
 import OptionalEmit from "./OptionalEmit.vue";
 import OptionalModel from "./OptionalModel.vue";
 

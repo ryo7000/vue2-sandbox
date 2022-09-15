@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { defineComponent, ref, computed, reactive } from "@vue/composition-api";
+import { defineComponent, ref, computed, reactive } from "vue";
 import { VRow, VCol, VBtn, VSwitch, VTooltip } from "vuetify/lib";
 import OptionalEmit from "./OptionalEmit.vue";
 import OptionalModel from "./OptionalModel.vue";

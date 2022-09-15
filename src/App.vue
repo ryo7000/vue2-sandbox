@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "vue";
 import logo from "./assets/logo.png";
 import { VApp, VMain, VDivider } from "vuetify/lib";
 import CompTsxSfcButton from "./components/CompTsxSfcButton.vue";
@@ -10,6 +10,7 @@ import OptionalButton from "./components/OptionalButton.vue";
 export default defineComponent({
   name: "App",
   setup(_props) {
+
     return () => (
       <div id="app">
         <VApp>

@@ -1,5 +1,5 @@
-import { defineComponent, ref, computed } from "@vue/composition-api";
-import { VRow, VBtn } from "vuetify/lib";
+import {defineComponent, ref, computed} from "vue";
+import {VRow, VBtn} from "vuetify/lib";
 
 export default defineComponent({
   name: "CompTsxOnlyButton",

@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "vue";
 import { VBtn } from "vuetify/lib";
 
 export default defineComponent({
